@@ -1,26 +1,52 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- nav -->
+  <div>
+    <nav_bar />
+    <hr />
+  </div>
+  <!-- Main -->
+  <main>
+    <!-- Left Pannel -->
+    <left_dashboard />
+    <!-- Right Pannel -->
+  </main>
+  <!-- Footer -->
+  <footer>
+    <!-- Question mark symbol and options  -->
+  </footer>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import nav_bar from '@/components/Nav.vue'
+import left_dashboard from './components/left_dashboard.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    // Nav,
+    nav_bar,
+    // Main,
+    // Left Pannel
+    left_dashboard,
+    // Right Pannel
+    // Footer
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #27272a;
+}
+template {
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+hr {
+  border: 0.5px solid #3f3e47;
 }
 </style>
