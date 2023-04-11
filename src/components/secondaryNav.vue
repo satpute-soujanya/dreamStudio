@@ -28,6 +28,7 @@ export default {
       // EditIcon,
       apiKey: '$2b$10$PojdNjZYqsfrBblyX39CLu.bYTtoX.f0SfT13dlGHWQzf2dtPph/a',
       apiData: '',
+      promptArray: '',
       prompt: '',
       neg_prompt: '',
     }
@@ -47,8 +48,9 @@ export default {
       axios
         .request(config)
         .then((response) => {
-          this.prompt = response.data.record.prompts
+          this.promptArray = response.data.record.prompts
           this.neg_prompt = response.data.record.negative_prompt
+          this.prompt = this.promptArray[0]
         })
         .catch((error) => {
           console.log(error)
@@ -57,7 +59,7 @@ export default {
     shufflePrompt(e) {
       e.preventDefault()
       const randomIndex = Math.floor(Math.random() * 4)
-      this.prompt = this.prompt[randomIndex]
+      this.prompt = this.promptArray[randomIndex]
     },
   },
 
