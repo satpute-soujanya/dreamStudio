@@ -49,7 +49,6 @@ export default {
         .then((response) => {
           this.prompt = response.data.record.prompts
           this.neg_prompt = response.data.record.negative_prompt
-          // console.log(this.prompt)
         })
         .catch((error) => {
           console.log(error)
@@ -58,7 +57,6 @@ export default {
     shufflePrompt(e) {
       e.preventDefault()
       const randomIndex = Math.floor(Math.random() * 4)
-      // console.log(this.prompt.length)
       this.prompt = this.prompt[randomIndex]
     },
   },
