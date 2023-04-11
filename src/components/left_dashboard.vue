@@ -1,7 +1,8 @@
 <template>
-  <div id="left_panel" ref="leftPanel"></div>
-  <div class="left_panel_content">
-    <secondaryNav />
+  <div id="left_panel" ref="leftPanel">
+    <div class="left_panel_content">
+      <secondaryNav />
+    </div>
   </div>
 </template>
 
@@ -74,7 +75,8 @@ export default {
   width: 10px;
 }
 .left_panel_content {
-  width: 30vw;
   margin: 0;
+  z-index: 1000;
+  position: fixed;
 }
 </style>

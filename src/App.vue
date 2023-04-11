@@ -39,7 +39,7 @@ export default {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #27272a;
+  /* background-color: #27272a; */
 }
 template {
   font-family: 'Inter', sans-serif;
